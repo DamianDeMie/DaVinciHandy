@@ -1,5 +1,8 @@
 body {
 	font-family: 'Archivo', sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
 }
 
 .page {
@@ -238,7 +241,8 @@ body {
 .location, .mobile, .mail{
 	position: relative;
 	left: 25px;
-	bottom: 35px;
+	bottom: 40px;
+	height: 10px;
 }
 
 
@@ -250,6 +254,7 @@ body {
 	height: 50px;
 	top: 2050px;
 	z-index: -1;
+	top: 2100px;
 }
 
 .creator p{
