@@ -3,6 +3,8 @@ body {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 500;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 .page {
@@ -14,6 +16,11 @@ body {
 }
 
 
+.logo {
+	position: relative;
+	left: 28px;
+	top: 15px;
+}
 
 .menu {
 	position: absolute;
@@ -21,7 +28,6 @@ body {
 	background-color: #222931;
 	font-size: 12px;
 	color: white;
-	padding: 5px;
 	top: 50px;
 	
 }
@@ -31,18 +37,14 @@ body {
 	margin: 0;
     padding: 0;
     overflow: hidden;
-    position: sticky;
-    top: 0;
 }
 
 .menu li {
-	display: inline;
-	padding: 0px
 	font-weight: bold;
 	float: left;
 }
 
-.menu li a{
+.menu > ul > li > a, .menu > ul > li > div > a{
 	display: block;
     color: white;
     text-align: center;
@@ -55,13 +57,41 @@ body {
 
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #222931;
+    width: 160px;
+    height: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content > a {
+	position: relative;
+    color: black;
+    padding: 5px 12px;
+    color: #aeb6be;
+    font-size: 16px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	color: #222931;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 
 .header {
-	position: absolute;
-	left: 0;
-	z-index: -1;
-	width: 100%;
-	top: 80px;
+	height: 600px;
+	margin-top: 50px;
+	background-image: url("../img/header.jpg");
+	background-size: cover;
 
 }
 
@@ -115,36 +145,31 @@ body {
 
 }
 
-.footer {
-	position: absolute;
-	top: 1200px;
-	left: 0;
+.meerWeten > div:hover{
+	background-color: #222931;
+	color: white;
+}
+
+section {
+	height: 530px;
 }
 
 .footerimg{
-	position: relative;
-	width: 100%;
+	background-image: url("../img/footer.jpg");
+	background-size: cover;
+	height: 318px;
 }
 
-.deals, .diensten, .contact{
-	width: 320px;
+.footer > div {
+	position: relative;
+	display: inline-block;
+	margin: 10px;
+	bottom: 65px;
+	width: 300px;
 	background-color: #ffe718;
 	font-size: 22px;
 	font-weight: 600;
-}
-
-
-.bannerimg{
-	width: 50%;
-	height: 40%;
-	padding: 10px;
-}
-
-
-.deals {
-	position: relative;
-	left: 380px;
-	bottom: 50px;
+	left: 15px;
 }
 
 .dealsHead {
@@ -165,10 +190,10 @@ body {
 	padding: 20px;
 }
 
-.diensten {
-	position: relative;
-	left: 740px;
-	bottom: 156px;
+.footer > div:hover{
+	background-color: #222931;
+	color: white;
+
 }
 
 .dienstenHead {
@@ -191,11 +216,6 @@ body {
 	padding: 20px;
 }
 
-.contact {
-	position: relative;
-	left: 1100px;
-	bottom: 260px;
-}
 .contactHead {
 	position: absolute;
 	left: 120px;
@@ -217,12 +237,6 @@ body {
 }
 
 .overOns {
-	position: absolute;
-	top: 1700px;
-	left: 380px;
-	width: 1040px;
-	display: block;
-	border-top: 1px solid grey;
 }
 
 .lorem{
@@ -231,30 +245,28 @@ body {
 }
 
 .contactInfo{
-	position: absolute;
-	top: 1700px;
-	right: 150px;
-	display: block;
-	width: 500px;
 }
 
 .location, .mobile, .mail{
 	position: relative;
-	left: 25px;
-	bottom: 40px;
+	left: 40px;
+	bottom: 50px;
 	height: 10px;
 }
 
+footer {
+	height: 450px;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto;
+}
 
 .creator {
 	background-color: #222931;
-	position: absolute;
-	left: 0px;
-	width: 100%;
+	background-size: cover;
 	height: 50px;
-	top: 2050px;
-	z-index: -1;
-	top: 2100px;
 }
 
 .creator p{
@@ -264,8 +276,9 @@ body {
 	right: 50px;
 }
 
+
 .dienstenText{
 	position: relative;
-	top: 650px;
+	top: 620px;
 	display: block;
 }
